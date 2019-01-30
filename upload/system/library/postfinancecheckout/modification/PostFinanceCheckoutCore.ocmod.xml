@@ -80,6 +80,16 @@
             ]]></add>
 		</operation>
 	</file>
+	<file path="admin/controller/sale/order.php">
+		<operation>
+			<search><![CDATA[
+				if (is_file(DIR_CATALOG . 'controller/payment/' . $order_info['payment_code'] . '.php')) {
+            ]]></search>
+			<add position="replace"><![CDATA[
+				if (is_file(DIR_CATALOG . 'controller/payment/' . $order_info['payment_code'] . '.php') || strpos($order_info['payment_code'], 'postfinancecheckout_') === 0) {
+            ]]></add>
+		</operation>
+	</file>
 	
 	<file path="system/engine/action.php">
 		<operation>

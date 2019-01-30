@@ -96,10 +96,11 @@ class ControllerExtensionPostFinanceCheckoutEvent extends PostFinanceCheckout\Co
 	public function update(){
 		try {
 			$this->validate();
+			$this->validateOrder();
 			
 			$transaction_info = \PostFinanceCheckout\Entity\TransactionInfo::loadByOrderId($this->registry, $this->request->get['order_id']);
 			
-			if ($transaction_info->getState() == \Wallee\Sdk\Model\TransactionState::AUTHORIZED) {
+			if ($transaction_info->getState() == \PostFinanceCheckout\Sdk\Model\TransactionState::AUTHORIZED) {
 				\PostFinanceCheckout\Service\Transaction::instance($this->registry)->updateLineItemsFromOrder($this->request->get['order_id']);
 				return;
 			}
