@@ -28,6 +28,10 @@ class PostFinanceCheckoutVersionHelper {
 				'file' => 'PostFinanceCheckoutQuickCheckoutCompatibility.ocmod.xml',
 				'default_status' => 0
 			),
+			'PostFinanceCheckoutJournalCompatibility' => array(
+				'file' => 'PostFinanceCheckoutJournalCompatibility.ocmod.xml',
+				'default_status' => 0
+			),
 			'PostFinanceCheckoutXFeeProCompatibility' => array(
 				'file' => 'PostFinanceCheckoutXFeeProCompatibility.ocmod.xml',
 				'default_status' => 0
@@ -108,19 +112,6 @@ class PostFinanceCheckoutVersionHelper {
 		}
 		
 		return $totals;
-	}
-	
-	public static function getCurrentCartId(\Registry $registry){
-		$customer_id = (int) $registry->get('customer')->getId();
-		$table = DB_PREFIX . 'customer';
-		
-		$query = "SELECT cart FROM $table WHERE customer_id='$customer_id';";
-		$result = $registry->get('db')->query($query);
-		
-		if ($result->row) {
-			return md5($result->row['cart']);
-		}
-		return 0;
 	}
 	
 	public static function persistPluginStatus(\Registry $registry, array $post) {
