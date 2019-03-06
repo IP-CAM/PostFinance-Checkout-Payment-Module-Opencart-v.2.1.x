@@ -3,25 +3,9 @@
 	<code>PostFinanceCheckoutCore</code>
 	<name>postfinancecheckout core: load payment methods.
 	</name>
-	<version>1.0.2</version>
+	<version>1.1.2</version>
 	<author>Customweb GmbH</author>
 	<link>http://github.com/postfinancecheckout-payment/opencart</link>
-	<file path="catalog/controller/checkout/checkout.php">
-		<operation>
-			<search><![CDATA[
-		if (isset($this->session->data['error'])) {
-            ]]></search>
-			<add position="before"><![CDATA[
-		require_once modification(DIR_SYSTEM . 'library/postfinancecheckout/helper.php');
-		if (isset($this->request->get['order_id']) && \PostFinanceCheckoutHelper::instance($this->registry)->isValidOrder($this->request->get['order_id'])
-			&& \PostFinanceCheckout\Service\Transaction::instance($this->registry)->waitForStates($this->request->get['order_id'], array(\PostFinanceCheckout\Sdk\Model\TransactionState::FAILED), 5)) {
-			$transaction_info = \PostFinanceCheckout\Entity\TransactionInfo::loadByOrderId($this->registry, $this->request->get['order_id']);
-			unset($this->registry->get('session')->data['order_id']);
-			$data['error_warning'] = $transaction_info->getFailureReason();
-		} else 
-            ]]></add>
-		</operation>
-	</file>
 	<file path="admin/controller/extension/payment.php">
 		<operation>
 			<search><![CDATA[
@@ -78,16 +62,6 @@
             ]]></search>
 			<add position="replace"><![CDATA[
 				require(modification($file))
-            ]]></add>
-		</operation>
-	</file>
-	<file path="admin/controller/sale/order.php">
-		<operation>
-			<search><![CDATA[
-				if (is_file(DIR_CATALOG . 'controller/payment/' . $order_info['payment_code'] . '.php')) {
-            ]]></search>
-			<add position="replace"><![CDATA[
-				if (is_file(DIR_CATALOG . 'controller/payment/' . $order_info['payment_code'] . '.php') || strpos($order_info['payment_code'], 'postfinancecheckout_') === 0) {
             ]]></add>
 		</operation>
 	</file>
