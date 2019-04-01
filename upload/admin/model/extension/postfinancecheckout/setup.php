@@ -36,8 +36,8 @@ class ModelExtensionPostFinanceCheckoutSetup extends AbstractModel {
 		$this->model_extension_postfinancecheckout_dynamic->uninstall();
 		if ($purge) {
 			$this->model_extension_postfinancecheckout_migration->purge();
+			$this->model_extension_postfinancecheckout_modification->uninstall();
 		}
-		$this->model_extension_postfinancecheckout_modification->uninstall();
 		
 		$this->removeEvents();
 		$this->removePermissions();
