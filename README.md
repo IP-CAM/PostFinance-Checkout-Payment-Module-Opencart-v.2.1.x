@@ -11,8 +11,8 @@ This repository contains the OpenCart  PostFinance Checkout payment module that 
 
 ## Documentation
 
-* [English](https://plugin-documentation.postfinance-checkout.ch/pfpayments/opencart-2.1/1.0.21/docs/en/documentation.html)
+* [English](https://plugin-documentation.postfinance-checkout.ch/pfpayments/opencart-2.1/1.0.22/docs/en/documentation.html)
 
 ## License
 
-Please see the [license file](https://github.com/pfpayments/opencart-2.1/blob/1.0.21/LICENSE) for more information.
+Please see the [license file](https://github.com/pfpayments/opencart-2.1/blob/1.0.22/LICENSE) for more information.
