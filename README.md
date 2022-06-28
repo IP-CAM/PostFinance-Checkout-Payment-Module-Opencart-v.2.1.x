@@ -2,9 +2,9 @@
 
 # OpenCart 2.1
 
-This repository contains the OpenCart  PostFinance Checkout payment module that enables the shop to process payments with [PostFinance Checkout](https://www.postfinance.ch/checkout).
+This repository contains the OpenCart  PostFinance Checkout payment module that enables the shop to process payments with [PostFinance Checkout](https://postfinance.ch/en/business/products/e-commerce/postfinance-checkout-all-in-one.html).
 
-##### To use this extension, a [PostFinance Checkout](https://www.postfinance.ch/checkout) account is required.
+##### To use this extension, a [PostFinance Checkout](https://checkout.postfinance.ch/en-ch/user/signup) account is required.
 
 ## Requirements
 
@@ -13,12 +13,12 @@ This repository contains the OpenCart  PostFinance Checkout payment module that 
 
 ## Documentation
 
-* [English](https://plugin-documentation.postfinance-checkout.ch/pfpayments/opencart-2.1/1.0.43/docs/en/documentation.html)
+* [English](https://plugin-documentation.postfinance-checkout.ch/pfpayments/opencart-2.1/1.0.45/docs/en/documentation.html)
 
 ## Support
 
-Support queries can be issued on the [PostFinance Checkout support site](https://www.postfinance.ch/en/business/support/written-contact/contact-form.html).
+Support queries can be issued on the [PostFinance Checkout support site](https://www.postfinance.ch/en/business/support.html).
 
 ## License
 
-Please see the [license file](https://github.com/pfpayments/opencart-2.1/blob/1.0.43/LICENSE) for more information.
+Please see the [license file](https://github.com/pfpayments/opencart-2.1/blob/1.0.45/LICENSE) for more information.
