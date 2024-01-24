@@ -25,7 +25,7 @@ namespace PostFinanceCheckout\Sdk;
  *
  * @category Class
  * @package  PostFinanceCheckout\Sdk
- * @author   customweb GmbH
+ * @author   wallee AG
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class ApiResponse {
@@ -90,5 +90,7 @@ class ApiResponse {
 	public function getData() {
 		return $this->data;
 	}
+
+}	}
 
 }

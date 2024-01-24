@@ -28,7 +28,7 @@ use \PostFinanceCheckout\Sdk\ObjectSerializer;
  *
  * @category    Class
  * @package     PostFinanceCheckout\Sdk
- * @author      customweb GmbH
+ * @author      wallee AG
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache License v2
  */
 class AbstractAccountUpdate implements ModelInterface, ArrayAccess
@@ -371,6 +371,10 @@ class AbstractAccountUpdate implements ModelInterface, ArrayAccess
 
         return json_encode(ObjectSerializer::sanitizeForSerialization($this));
     }
+}
+
+
+
 }
 
 
